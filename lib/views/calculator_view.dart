@@ -35,9 +35,32 @@ class _CalculatorViewState extends State<CalculatorView> {
       onPause:_onPause,
       onRestart: _onRestart,
       onStateChange: _onStateChanged,
-      onExitRequested: _onExitRequested
+     
     );
   }
+
+  void _onShow()=>print("OnShow called");
+
+  void _onHide()=>print("onHide called");
+  void _onResume()=>print("onResume called");
+  void _onDetach()=>print("onDetach called");
+  void _onInactive()=>print("");
+  void _onPause()=>print("onPause called");
+  void _onRestart()=>print("onRestart called");
+  void _onStateChanged(AppLifecycleState state){
+    print("onStateChanged called with state: $state ");
+  }
+
+
+
+@override
+void dispose(){
+  displayOneController.dispose();
+  displayTwoController.dispose();
+  _listener.dispose();
+  super.dispose();
+}
+
   @override
   Widget build(BuildContext context)
   {
@@ -47,15 +70,20 @@ class _CalculatorViewState extends State<CalculatorView> {
         children: [
           //Calculator Display
           CalculatorDisplay(
+            key:Key("displayOne"),
             hint:"Enter First Number",
             controller:displayOneController,
             ),
           SizedBox(height:30),
-           CalculatorDisplay( hint:"Enter second Number",
+           CalculatorDisplay( 
+             key:Key("displayTwo"),
+            hint:"Enter second Number",
             controller:displayTwoController,
            ),
             SizedBox(height:30),
-            Text(z.toString(),
+            Text(
+              key:Key("Result"),
+              z.toString(),
             style:TextStyle(
               fontSize:60,
               fontWeight:FontWeight.bold,

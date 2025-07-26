@@ -1,15 +1,45 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutterpract/app/app.dart';
 
 void main(){
-  testWidgets("Hello World Test",(WidgetTester tester)async{
+  group("Calculator View Tet",(){
+  testWidgets("Calculator Basic Test",(WidgetTester tester)async{
 
     await tester.pumpWidget(const MyApp());
-
-    expect(find.byType(Container), findsOneWidget);
-     expect(find.text("Hello World"), findsOneWidget);
-     expect(find.byType(Center), findsOneWidget);
-
+     expect(find.byKey(Key("Result")), findsOneWidget);
+      expect(find.byKey(Key("displayOne")), findsOneWidget);
+      expect(find.byKey(Key("displayTwo")), findsOneWidget);
+       expect(find.byIcon(CupertinoIcons.add), findsOneWidget);
+       expect(find.byIcon(CupertinoIcons.minus), findsOneWidget);
+        expect(find.byIcon(CupertinoIcons.multiply), findsOneWidget);
+         expect(find.byIcon(CupertinoIcons.divide), findsOneWidget);
+      
   });
+    group("Operations",(WidgetTester  tester)async{
+
+          await tester.enterText(find.byKey(Key("displayOne")), "20");
+         await tester.enterText(find.byKey(Key("displayTwo")), "10");
+
+
+
+         await tester.tap(find.byIcon(CupertinoIcons.add));
+         await tester.pump();
+         expect(find.text("30"),findsOneWidget);
+
+          await tester.tap(find.byIcon(CupertinoIcons.minus));
+         await tester.pump();
+         expect(find.text("10"),findsNWidgets(2));
+
+          await tester.tap(find.byIcon(CupertinoIcons.multiply));
+         await tester.pump();
+         expect(find.text("200"),findsOneWidget);
+
+          await tester.tap(find.byIcon(CupertinoIcons.divide));
+         await tester.pump();
+         expect(find.text("2.0"),findsOneWidget);
+
+     });
+});
 }
