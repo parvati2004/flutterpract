@@ -17,7 +17,8 @@ void main(){
          expect(find.byIcon(CupertinoIcons.divide), findsOneWidget);
       
   });
-    group("Operations",(WidgetTester  tester)async{
+    testWidgets("Operations",(WidgetTester  tester)async{
+       await tester.pumpWidget(const MyApp());
 
           await tester.enterText(find.byKey(Key("displayOne")), "20");
          await tester.enterText(find.byKey(Key("displayTwo")), "10");
