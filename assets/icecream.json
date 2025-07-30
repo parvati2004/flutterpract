@@ -7,7 +7,11 @@
       "price": 2.99,
       "rating": 4.5,
       "available": true,
-      "ingredients": ["milk", "sugar", "vanilla extract"],
+      "ingredients": [
+        { "name": "Milk", "quantity": "200ml" },
+        { "name": "Sugar", "quantity": "50g" },
+        { "name": "Vanilla Extract", "quantity": "1 tsp" }
+      ],
       "image": "https://images.unsplash.com/photo-1560008581-09826d1de69e?q=80&w=1044&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "Classic vanilla ice cream made with real vanilla extract, perfect for all ages."
     },
@@ -18,7 +22,11 @@
       "price": 3.49,
       "rating": 4.8,
       "available": true,
-      "ingredients": ["milk", "cocoa powder", "sugar"],
+      "ingredients": [
+        { "name": "Milk", "quantity": "200ml" },
+        { "name": "Cocoa Powder", "quantity": "40g" },
+        { "name": "Sugar", "quantity": "50g" }
+      ],
       "image": "https://media.istockphoto.com/id/936155834/photo/belgian-chocolate-ice-creams.jpg?s=612x612&w=is&k=20&c=5xD177ENMTbmo7VuFNhbnGp-dGUcGwm-y2dCjfwDwD4=",
       "description": "Rich and creamy chocolate ice cream for true chocolate lovers."
     },
@@ -29,7 +37,11 @@
       "price": 3.29,
       "rating": 4.2,
       "available": false,
-      "ingredients": ["milk", "strawberries", "sugar"],
+      "ingredients": [
+        { "name": "Milk", "quantity": "200ml" },
+        { "name": "Strawberries", "quantity": "80g" },
+        { "name": "Sugar", "quantity": "50g" }
+      ],
       "image": "https://media.istockphoto.com/id/508832706/photo/dessert-with-fresh-strawberry-cream-cheese-and-strawberry-jam.jpg?s=1024x1024&w=is&k=20&c=XuKllWJEBomq9u95V6ji76-YF8Qk2D346rMz7wloAZk=",
       "description": "Refreshing strawberry ice cream made with real strawberries."
     },
@@ -40,7 +52,11 @@
       "price": 3.75,
       "rating": 4.7,
       "available": true,
-      "ingredients": ["milk", "mango puree", "sugar"],
+      "ingredients": [
+        { "name": "Milk", "quantity": "200ml" },
+        { "name": "Mango Puree", "quantity": "70g" },
+        { "name": "Sugar", "quantity": "50g" }
+      ],
       "image": "https://media.istockphoto.com/id/908734588/photo/mango-lassi-in-glasses.jpg?s=1024x1024&w=is&k=20&c=anmKuzvpUgCxUqeRa5EtF6VMQdXLE4ZHCaqQpaVCOq8=",
       "description": "Tropical mango ice cream with a smooth, fruity twist."
     },
@@ -51,7 +67,11 @@
       "price": 3.99,
       "rating": 4.3,
       "available": true,
-      "ingredients": ["milk", "mint flavor", "chocolate chips"],
+      "ingredients": [
+        { "name": "Milk", "quantity": "200ml" },
+        { "name": "Mint Flavor", "quantity": "1 tsp" },
+        { "name": "Chocolate Chips", "quantity": "40g" }
+      ],
       "image": "https://media.istockphoto.com/id/1207424589/photo/coconut-ice-cream-in-coconut-with-strawberries-and-chocolate-chips-as-topping.jpg?s=1024x1024&w=is&k=20&c=ap19TB6qeWyFXHmTCierRnkATINEscdvXet0SuX7cYw=",
       "description": "Cool mint ice cream loaded with crunchy chocolate chips for a refreshing bite."
     }

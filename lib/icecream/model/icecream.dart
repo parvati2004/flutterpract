@@ -60,6 +60,8 @@ class Icecream {
     );
   }
 
+  get toppings => null;
+
   /// Convert Icecream to JSON
   Map<String, dynamic> toJson() {
     return {
